@@ -17,24 +17,17 @@ fun main(){
             .append("Quotient: Q\n")
         println(ops)
         val str= readLine()
-        if (str == "S"|| str == "s"){ println("The sum of your values is ${num1 + num2}")}
-        else if (str == "D"|| str == "d"){ println("The difference of your values is ${num1 - num2}")}
+        if (str == "S"|| str == "s"){println("The sum of your values is ${addNumbers(num1,num2)}")}
+        else if (str == "D"|| str == "d"){ println("The difference of your values is ${DiffNumbers(num1,num2)}")}
         else if (str == "P"|| str == "p"){ println("The product of your values is ${num1 * num2}")}
         else if (str == "Q"|| str == "q"){ println("The Quotient of your values is ${num1 / num2}")}
-        else println("I don'1t recognize that op Sir")
+        else println("I don't recognize that Op Sir")
     }
     catch (e:Exception){
     println ("${e.message} is not a number")
     }
 
-
-
-//
-//    println("Enter num2")
-//    var num2= readLine()
-
-
-
 }
-
-fun addNumbers(num1:Int, num2:Int){}
+//defined the function outside and called it in the main function
+fun addNumbers(number1:Double, number2:Double) = number1 + number2
+fun DiffNumbers(number1:Double, number2:Double) = number1 - number2
